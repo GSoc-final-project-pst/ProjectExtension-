@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Feed Cleaner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Smart Feed Cleaner</h2>
+        <div class="controls">
+            <div class="switch-container">
+                <label class="switch">
+                    <input type="checkbox" id="enableCleaning">
+                    <span class="slider round"></span>
+                </label>
+                <span>Enable Cleaning</span>
+            </div>
+            <div class="stats">
+                <p>Posts Cleaned: <span id="cleanedCount">0</span></p>
+            </div>
+            <button id="refreshFeed" class="button">Refresh Feed</button>
+            <button id="resetStats" class="button">Reset Stats</button>
+        </div>
+        <div class="status">
+            <p id="statusText">Cleaner is inactive</p>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
