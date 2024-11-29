@@ -59,12 +59,11 @@ class FeedCleaner {
         const text = postElement.innerText || '';
         const features = new Array(10).fill(0);
 
-        // Simple feature extraction
-        features[0] = text.length / 1000; // Normalized length
+        features[0] = text.length / 1000; 
         features[1] = (text.match(/sponsored/gi) || []).length;
         features[2] = (text.match(/suggested/gi) || []).length;
         features[3] = (text.match(/ad/gi) || []).length;
-        // Add more features as needed
+       
 
         return tf.tensor2d([features]);
     }
